@@ -5,10 +5,10 @@ import generateToken from '../utils/generateToken.js';
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
-  console.log("req");
-  console.log(req);
-  console.log("res");
-  console.log(res);
+  console.log("req.body");
+  console.log(req.body);
+  // console.log("res");
+  // console.log(res);
 
   const user = await User.findOne({ email });
 
