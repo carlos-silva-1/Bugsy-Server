@@ -20,7 +20,7 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use(cors({ origin: 'https://bugsy-front-g2zwcmxy3-carlos-silva-1.vercel.app/', credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 // app.options('*', cors());
 
 app.use('/api/users', userRoutes);
