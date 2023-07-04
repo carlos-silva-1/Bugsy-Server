@@ -1,0 +1,58 @@
+const issueData = [
+  {
+    title: "Searchbox Bug #2.",
+    category: "Bug",
+    priority: "Low",
+    description: "If you type your search term in the searchbox, and then click outside of the searchbox, your text and 'Search' placeholder overlay.",
+    condition: "Unresolved",
+    assignees: ["Alan Dev - alan@dev.com"],
+    comments: [],
+  },
+  {
+    title: "Request #4",
+    category: "Request",
+    priority: "Low",
+    description: "Users should be able to upvote and downvote instead of just being able to comment.",
+    condition: "Unresolved",
+    assignees: ["Eric Admin - eric@admin.com"],
+    comments: ["[2023/6/29 - 11:38:24] Alan Dev: I agree."],
+  },
+  {
+    title: "Editing Bug #12",
+    category: "Bug",
+    priority: "High",
+    description: "Sometimes when editing a post, it can get stuck loading forever after clicking the 'send' button. Cause still unknown.",
+    condition: "Unresolved",
+    assignees: ["Alan Dev - alan@dev.com", "Stephen Dev - stephen@dev.com"],
+    comments: [],
+  },
+  {
+    title: "UI Issue #5",
+    category: "UI, Bug",
+    priority: "Medium",
+    description: "Success message will not show at the end of any operation on version 1.2.9.",
+    condition: "Resolved",
+    assignees: ["Alan Dev - alan@dev.com", "Stephen Dev - stephen@dev.com"],
+    comments: ["[2023/06/28 - 14:32:17] Stephen Dev: Should be reassigned to another dev, I'm already working on two other issues.", "[2023/06/28 - 15:02:19] Alan Dev: I had some free time, so I fixed it already."],
+  },
+  {
+    title: "Documentation Error #3",
+    category: "Documentation",
+    priority: "Medium",
+    description: "The contact information is wrong at the final section of the documentation. We no longer use those emails.",
+    condition: "Resolved",
+    assignees: ["James Dev - james@dev.com"],
+    comments: ["[2023/6/30 - 09:51:14] James Dev: Fixed. Now should show the correct info."],
+  },
+  {
+    title: "Execution Bug #4",
+    category: "Bug",
+    priority: "Urgent",
+    description: "App will not start with newest Windows update. Works without an issue on other operating systems and until the last update.",
+    condition: "Unresolved",
+    assignees: ["Laurie Admin - laurie@admin.com", "James Dev - james@dev.com", "Stephen Dev - stephen@dev.com"],
+    comments: [],
+  },
+]
+
+export default issueData;
