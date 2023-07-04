@@ -20,8 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
-app.use(cors({ origin: true, credentials: true }));
+// app.use(cors({ origin: '*', credentials: true }));
 // app.options('*', cors());
+app.use(cors());
 
 app.use('/api/users', userRoutes);
 app.use('/api/issues', issueRoutes);
