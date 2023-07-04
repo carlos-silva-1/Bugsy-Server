@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(cookieParser());
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: '*', credentials: true }));
 // app.options('*', cors());
 
 app.use('/api/users', userRoutes);
