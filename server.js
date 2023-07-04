@@ -9,7 +9,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import userRoutes from './routes/userRoutes.js';
 import issueRoutes from './routes/issueRoutes.js';
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 10000;
 
 connectDB();
 
