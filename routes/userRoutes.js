@@ -11,13 +11,13 @@ import { protect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-router.get('/', protect, getAllUserProfiles);
+router.get('/', getAllUserProfiles);
 router.post('/', registerUser);
 router.post('/auth', authUser);
 router.post('/logout', logoutUser);
 router
   .route('/profile')
-  .get(protect, getUserProfile)
-  .put(protect, updateUserProfile);
+  .get(getUserProfile)
+  .put(updateUserProfile);
 
 export default router;

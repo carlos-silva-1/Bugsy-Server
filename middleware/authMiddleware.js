@@ -7,15 +7,15 @@ const protect = asyncHandler(async (req, res, next) => {
 
   token = req.cookies.jwt;
 
-  console.log("req.body");
-  console.log(req.body);
-  console.log("req.cookies");
-  console.log(req.cookies);
-  console.log("req.cookies.jwt");
-  console.log(req.cookies.jwt);
+  // console.log("req.body");
+  // console.log(req.body);
+  // console.log("req.cookies");
+  // console.log(req.cookies);
+  // console.log("req.cookies.jwt");
+  // console.log(req.cookies.jwt);
 
-  console.log("res");
-  console.log(res);
+  // console.log("res");
+  // console.log(res);
 
   if (token) {
     try {
