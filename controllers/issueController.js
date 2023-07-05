@@ -1,5 +1,6 @@
 import asyncHandler from 'express-async-handler';
 import Issue from '../models/issueModel.js';
+import generateToken from '../utils/generateToken.js';
 
 const createIssue = asyncHandler(async (req, res) => {
   const { title, category, priority, description, condition, assignees } = req.body;
@@ -11,6 +12,8 @@ const createIssue = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error('Issue already exists. Issues must have different titles.');
   }
+
+  generateToken(res, req.user.id);
 
   const issue = await Issue.create({
     title,
@@ -34,6 +37,7 @@ const getAllIssues = asyncHandler(async(req, res) => {
 	const issues = await Issue.find({});
 
 	if(issues) {
+		generateToken(res, req.user.id);
 		res.json(issues);
 	}
 	else {
@@ -44,6 +48,7 @@ const getAllIssues = asyncHandler(async(req, res) => {
 const getIssue = asyncHandler(async(req, res) => {
 	const issue = await Issue.findById(req.params.id);
 	if(issue) {
+		generateToken(res, req.user.id);
 		res.json(issue);
 	} 
 	else {
@@ -54,6 +59,8 @@ const getIssue = asyncHandler(async(req, res) => {
 const updateIssue = asyncHandler(async(req, res) => {
 	const issue = await Issue.findById(req.params.id);
 	if(issue) {
+		generateToken(res, req.user.id);
+
 		issue.title = req.body.title;
 		issue.category = req.body.category;
 		issue.priority = req.body.priority;
@@ -74,6 +81,7 @@ const deleteIssue = asyncHandler(async(req, res) => {
 	const issue = await Issue.findById(req.params.id);
 
 	if(issue) {
+		generateToken(res, req.user.id);
 		const obj = await Issue.deleteOne({ _id: req.params.id });
 		res.json({ success: true });
 	}
