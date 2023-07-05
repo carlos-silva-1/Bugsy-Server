@@ -89,8 +89,8 @@ const getAllUserProfiles = asyncHandler(async (req, res) => {
 });
 
 const updateUserProfile = asyncHandler(async (req, res) => {
-  console.log("req.body");
-  console.log(req.body);
+  console.log("req");
+  console.log(req);
   const user = await User.findById(req.user._id);
 
 
