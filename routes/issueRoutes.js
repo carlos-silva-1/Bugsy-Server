@@ -12,8 +12,8 @@ const router = express.Router();
 
 router.get('/', getAllIssues);
 router.get('/:id', getIssue);
-router.post('/', protect, createIssue);
+router.post('/', createIssue);
 router.put('/:id', updateIssue);
-router.delete('/:id', protect, deleteIssue);
+router.delete('/:id', deleteIssue);
 
 export default router;
