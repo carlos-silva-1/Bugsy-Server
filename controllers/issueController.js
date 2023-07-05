@@ -3,11 +3,10 @@ import Issue from '../models/issueModel.js';
 // import jwt from 'jsonwebtoken';
 
 const createIssue = asyncHandler(async (req, res) => {
+	console.log("req.user");
+  console.log(req.user);
   const { title, category, priority, description, condition, assignees } = req.body;
   const userId = req.user.id;
-
-  console.log("req.user");
-  console.log(req.user);
 
   const issueExists = await Issue.findOne({ title });
 
