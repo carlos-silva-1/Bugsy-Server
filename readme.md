@@ -92,28 +92,11 @@ This application depends on JWT (JSON Web Tokens) and bcryptjs for authenticatio
 
 ---
 
-## Installation & Usage
+## Deployment
 
-The following commands will install all dependencies for both server and client side.
+Deployed with Render:
 
-```
-npm install
-cd frontend
-npm install
-```
-
-The following commands will run the application (must be ran on root directory).
-
-```
-# Run frontend (:3000) & backend (:5000)
-npm run dev
-
-# Run backend only
-npm run server
-
-# Run frontend only
-npm run client
-```
+https://bugsyclient.onrender.com
 
 ## Database Seeding
 
@@ -130,8 +113,8 @@ npm run data:destroy
 ## Environment Variables
 
 ```
-NODE_ENV = development
-PORT = 5000
+NODE_ENV = production
+PORT = 10000
 MONGO_URI = your mongodb uri
 JWT_SECRET = your JWT secret
 ```
