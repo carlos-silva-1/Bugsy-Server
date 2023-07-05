@@ -3,8 +3,8 @@ import Issue from '../models/issueModel.js';
 // import jwt from 'jsonwebtoken';
 
 const createIssue = asyncHandler(async (req, res) => {
-	console.log("req.user");
-  console.log(req.user);
+	console.log("req.body");
+  console.log(req.body);
   const { title, category, priority, description, condition, assignees } = req.body;
   const userId = req.user.id;
 
