@@ -17,7 +17,7 @@ const authUser = asyncHandler(async (req, res) => {
     generateToken(res, user._id);
 
     //res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Authorization', `Bearer ${jwt.sign(user._id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
+    //res.setHeader('Authorization', `Bearer ${jwt.sign(user._id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
 
     res.json({
       _id: user._id,
