@@ -75,6 +75,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
   if (user) {
+    generateToken(res, user._id);
     res.json({
       _id: user._id,
       name: user.name,
@@ -91,6 +92,7 @@ const getAllUserProfiles = asyncHandler(async (req, res) => {
   const users = await User.find({});
 
   if (users) {
+    generateToken(res, user._id);
     res.json({users});
   } else {
     res.status(404);
