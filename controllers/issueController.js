@@ -1,6 +1,5 @@
 import asyncHandler from 'express-async-handler';
 import Issue from '../models/issueModel.js';
-// import jwt from 'jsonwebtoken';
 
 const createIssue = asyncHandler(async (req, res) => {
   const { title, category, priority, description, condition, assignees } = req.body;
@@ -22,7 +21,6 @@ const createIssue = asyncHandler(async (req, res) => {
   });
 
   if(issue) {
-  	// res.setHeader('Authorization', `Bearer ${jwt.sign(req.user.id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
   	res.json(issue);
   }
   else {
@@ -34,7 +32,6 @@ const getAllIssues = asyncHandler(async(req, res) => {
 	const issues = await Issue.find({});
 
 	if(issues) {
-		// res.setHeader('Authorization', `Bearer ${jwt.sign(req.user.id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
 		res.json(issues);
 	}
 	else {
@@ -45,7 +42,6 @@ const getAllIssues = asyncHandler(async(req, res) => {
 const getIssue = asyncHandler(async(req, res) => {
 	const issue = await Issue.findById(req.params.id);
 	if(issue) {
-		// res.setHeader('Authorization', `Bearer ${jwt.sign(req.user.id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
 		res.json(issue);
 	} 
 	else {
@@ -56,8 +52,6 @@ const getIssue = asyncHandler(async(req, res) => {
 const updateIssue = asyncHandler(async(req, res) => {
 	const issue = await Issue.findById(req.params.id);
 	if(issue) {
-		// res.setHeader('Authorization', `Bearer ${jwt.sign(req.user.id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
-
 		issue.title = req.body.title;
 		issue.category = req.body.category;
 		issue.priority = req.body.priority;
@@ -78,7 +72,6 @@ const deleteIssue = asyncHandler(async(req, res) => {
 	const issue = await Issue.findById(req.params.id);
 
 	if(issue) {
-		// res.setHeader('Authorization', `Bearer ${jwt.sign(req.user.id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
 		const obj = await Issue.deleteOne({ _id: req.params.id });
 		res.json({ success: true });
 	}

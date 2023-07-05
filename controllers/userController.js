@@ -1,23 +1,13 @@
 import asyncHandler from 'express-async-handler';
 import User from '../models/userModel.js';
 import generateToken from '../utils/generateToken.js';
-//import jwt from 'jsonwebtoken';
 
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
-
-  console.log("req.body");
-  console.log(req.body);
-  // console.log("res");
-  // console.log(res);
-
   const user = await User.findOne({ email });
 
   if (user && (await user.matchPassword(password))) {
     generateToken(res, user._id);
-
-    //res.setHeader('Access-Control-Allow-Origin', '*');
-    // res.setHeader('Authorization', `Bearer ${jwt.sign(user._id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
 
     res.json({
       _id: user._id,
@@ -51,9 +41,6 @@ const registerUser = asyncHandler(async (req, res) => {
   if (user) {
     generateToken(res, user._id);
 
-    //res.setHeader('Access-Control-Allow-Origin', '*');
-    // res.setHeader('Authorization', `Bearer ${jwt.sign(user._id, process.env.JWT_SECRET, {expiresIn: '30d'})}`);
-
     res.status(201).json({
       _id: user._id,
       name: user.name,
@@ -78,7 +65,6 @@ const getUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
   if (user) {
-    //generateToken(res, user._id);
     res.json({
       _id: user._id,
       name: user.name,
@@ -95,7 +81,6 @@ const getAllUserProfiles = asyncHandler(async (req, res) => {
   const users = await User.find({});
 
   if (users) {
-    //generateToken(res, user._id);
     res.json({users});
   } else {
     res.status(404);
