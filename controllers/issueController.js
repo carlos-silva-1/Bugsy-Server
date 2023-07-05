@@ -6,7 +6,6 @@ const createIssue = asyncHandler(async (req, res) => {
 	console.log("req.body");
   console.log(req.body);
   const { title, category, priority, description, condition, assignees } = req.body;
-  const userId = req.user.id;
 
   const issueExists = await Issue.findOne({ title });
 
@@ -21,7 +20,6 @@ const createIssue = asyncHandler(async (req, res) => {
     priority,
     description, 
     condition, 
-    userId,
     assignees,
   });
 
