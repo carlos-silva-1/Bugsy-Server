@@ -2,7 +2,7 @@
 
 This is a SPA (Single Page Application) full-stack bug tracker built with the MERN stack. 
 
-![](frontend/src/assets/bugsy.png)
+![](assets/bugsy.png)
 
 It allows the management of bugs by CRUD operations; REST API with axios; user authentication using JWT and bcryptjs; offers data persistence with MongoDB; manages application state with Redux. 
 
@@ -98,7 +98,7 @@ Deployed with Render:
 
 https://bugsyclient.onrender.com
 
-## Database Seeding
+## Database Seeding & Sample Data
 
 The following commands will seed the database with sample users and issues.
 
@@ -108,6 +108,25 @@ npm run data:import
 
 # Destroy data
 npm run data:destroy
+```
+
+The sample users are:
+
+```
+email: laurie@admin.com
+password: 123456
+
+email: eric@admin.com
+password: 123456
+
+email: stephen@dev.com
+password: 123456
+
+email: alan@dev.com
+password: 123456
+
+email: james@dev.com
+password: 123456
 ```
 
 ## Environment Variables
