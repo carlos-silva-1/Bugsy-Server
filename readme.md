@@ -8,6 +8,14 @@ It allows the management of bugs by CRUD operations; REST API with axios; user a
 
 ---
 
+## Deployment
+
+Deployed with Render:
+
+https://bugsyclient.onrender.com
+
+---
+
 ## Built With
 
 - MongoDB
@@ -91,12 +99,6 @@ This application depends on JWT (JSON Web Tokens) and bcryptjs for authenticatio
 - Database seeder
 
 ---
-
-## Deployment
-
-Deployed with Render:
-
-https://bugsyclient.onrender.com
 
 ## Database Seeding & Sample Data
 
