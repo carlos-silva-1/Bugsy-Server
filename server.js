@@ -15,10 +15,10 @@ connectDB();
 
 const app = express();
 
+app.use(cookieParser());
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-app.use(cookieParser());
 
 app.use(cors({ origin: true, credentials: true }));
 // app.options('*', cors());
