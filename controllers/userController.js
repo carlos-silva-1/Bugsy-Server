@@ -89,6 +89,8 @@ const getAllUserProfiles = asyncHandler(async (req, res) => {
 });
 
 const updateUserProfile = asyncHandler(async (req, res) => {
+  console.log("req.user");
+  console.log(req.user);
   const user = await User.findById(req.user._id);
 
   if (user) {
@@ -103,7 +105,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     const updatedUser = await user.save();
 
     res.json({
-      _id: updatedUser._id,
+      // _id: updatedUser._id,
       name: updatedUser.name,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
