@@ -4,7 +4,7 @@ This is a SPA (Single Page Application) full-stack bug tracker built with the ME
 
 ![](assets/bugsy.gif)
 
-It allows the management of bugs by CRUD operations; REST API with axios; user authentication using JWT and bcryptjs; offers data persistence with MongoDB; manages application state with Redux. 
+It allows the management of bugs by CRUD operations; user authentication using JWT and bcryptjs; offers data persistence with MongoDB; manages application state with Redux. 
 
 ---
 
