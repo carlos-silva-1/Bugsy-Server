@@ -14,6 +14,10 @@ Deployed with Render:
 
 https://bugsyclient.onrender.com
 
+## Frontend link
+
+https://github.com/carlos-silva-1/bugsy-front
+
 ---
 
 ## Built With
