@@ -12,7 +12,7 @@ It allows the management of bugs by CRUD operations; user authentication using J
 
 Deployed with Render:
 
-https://bugsyclient.onrender.com
+https://bugsy-front.onrender.com/
 
 ## Frontend link
 
