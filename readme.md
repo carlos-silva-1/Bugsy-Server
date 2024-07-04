@@ -27,7 +27,6 @@ https://github.com/carlos-silva-1/bugsy-front
 - React
 - Node
 - Redux
-- JWT
 
 ---
 
